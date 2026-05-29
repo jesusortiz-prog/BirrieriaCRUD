@@ -1,0 +1,6 @@
+#backups
+database/backups/
+#variables del ambiente
+.env
+#Node
+node_modules/
