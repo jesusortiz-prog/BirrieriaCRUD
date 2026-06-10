@@ -11,4 +11,5 @@ $conexion = $db->conectar(); //$conexion tiene el Data Source Name
 $controller = new ProductoController(); 
 $controller->mostrarProductos($conexion);
 
+// echo 'hola';
 ?>

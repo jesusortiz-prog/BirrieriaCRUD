@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass":"sass public/assets/sass/main.scss public/assets/css/main.css --watch"
+    "compile:sass": "sass public/assets/sass/main.scss public/assets/css/main.css --watch",
+    "dev":"concurrently \"php -S localhost:8000 -t public\" \"npm run compile:sass\" "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^10.0.3",
     "sass": "^1.100.0"
   }
 }
