@@ -18,7 +18,7 @@ class Database{
                 //Le decimos que usamos el motor de mysql, le damos el nombre de la DB y la configuracion de los caracteres
                 $dsn = "mysql:host={$this->host};dbname={$this->db_name};charset={$this->charset}";
                 //Se crea la conexion
-                $this->conexion = new PDO(
+                $this->conexion = new PDO( //conexion es el objeto pdo conectado
                     $dsn,
                     $this->user,
                     $this->password
@@ -31,7 +31,7 @@ class Database{
                     PDO::ATTR_DEFAULT_FETCH_MODE,
                     PDO::FETCH_ASSOC
                 );
-                echo "Conexion exitosa";
+                // echo "Conexion exitosa";
             }catch(PDOException $e){
                 die("Error de conexion: " . $e->getMessage());
             }

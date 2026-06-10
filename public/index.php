@@ -1,9 +1,14 @@
 <?php
+include_once(__DIR__ . '/../app/config/db.php'); 
+// include_once(__DIR__ . '/../app/models/productos.php'); 
 
-//Borrar ya que solo fue para confirmar la conexion
-include("app/config/db.php");
+include_once(__DIR__ . '/../app/controllers/productoController.php'); 
 
-$db = new Database;
+//aqui index esta creando un objeto Database y haciendo la conexion
+$db = new Database();
+$conexion = $db->conectar(); //$conexion tiene el Data Source Name
 
-$conexion = $db->conectar();
+$controller = new ProductoController(); 
+$controller->mostrarProductos($conexion);
+
 ?>
